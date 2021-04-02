@@ -25,14 +25,14 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     [x] Make ConfirmSubmit component
 [x] Bring in HashRouter and Route
 [x] Make Router component
-[ ] Write reducer in Index.js in which state is an object/object will take in new properties with spread ( state = [ ...state, feeling: action.payload ])
-[ ] Build out Feeling component
-    [ ] Header
-    [ ] How are you feeling today?
-    [ ] input for number b/t 1 and 5
+[x] Write reducer in Index.js in which state is an object/object will take in new properties with spread ( state = [ ...state, feeling: action.payload ])
+[x] Build out Feeling component
+    [x] Header
+    [x] How are you feeling today?
+    [x] input for number b/t 1 and 5
     [ ] "Next" button that links to Understanding
-    [ ] dispatch to Redux store
-    [ ] Add to reducer object
+    [x] dispatch to Redux store
+    [x] Add to reducer object
 [ ] Build out Understanding component
     [ ] Header
     [ ] How well are you understanding the content
