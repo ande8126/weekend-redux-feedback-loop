@@ -22,6 +22,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     [x] Make Support component
     [x] Make Comments component
     [x] Make Review component
+    [x] Make ConfirmSubmit component
 [x] Bring in HashRouter and Route
 [x] Make Router component
 [ ] Write reducer in Index.js in which state is an object/object will take in new properties with spread ( state = [ ...state, feeling: action.payload ])
