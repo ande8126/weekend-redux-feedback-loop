@@ -30,16 +30,16 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     [x] Header
     [x] How are you feeling today?
     [x] input for number b/t 1 and 5
-    [ ] "Next" button that links to Understanding
+    [x] "Next" button that links to Understanding
     [x] dispatch to Redux store
     [x] Add to reducer object
-[ ] Build out Understanding component
-    [ ] Header
-    [ ] How well are you understanding the content
-    [ ] input for number b/t 1 and 5
-    [ ] "Next" button that links to Support
-    [ ] dispatch to Redux store
-    [ ] Add to reducer object
+[x] Build out Understanding component
+    [x] Header
+    [x] How well are you understanding the content
+    [x] input for number b/t 1 and 5
+    [x] "Next" button that links to Support
+    [x] dispatch to Redux store
+    [x] Add to reducer object
 [ ] Build out Support component
     [ ] Header
     [ ] How well are you being supported?
