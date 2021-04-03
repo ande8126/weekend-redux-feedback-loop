@@ -11,7 +11,12 @@ const Review = () => {
 
     const sendResults = () =>{
         console.log( 'in sendResults');
-        axios.post( '/')
+        axios.post( '/feedback', survey ).then( ( response )=>{
+            console.log( 'back from POST with response:', response );
+        }).catch( ( err )=>{
+            console.log( err );
+            alert( 'error in POST', err );
+        })
     }
 
     return (
