@@ -22,6 +22,9 @@ const surveyReducer = ( state = {}, action )=>{
     if ( action.type === 'sendComments' ){
         state = {...state, comments: action.payload}
     }
+    if ( action.type === 'clearSurvey' ){
+        state = {};
+    }
     return state;
 }
 
