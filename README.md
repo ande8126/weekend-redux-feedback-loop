@@ -40,20 +40,20 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     [x] "Next" button that links to Support
     [x] dispatch to Redux store
     [x] Add to reducer object
-[ ] Build out Support component
-    [ ] Header
-    [ ] How well are you being supported?
-    [ ] input for number b/t 1 and 5
-    [ ] "Next" button that links to Comments
-    [ ] dispatch to Redux store
-    [ ] Add to reducer object
-[ ] Build out Comments component
-    [ ] Header
-    [ ] How are you feeling today?
-    [ ] input for number b/t 1 and 5
-    [ ] "Next" button that links to Review
-    [ ] dispatch to Redux store
-    [ ] Add to reducer objectß
+[x] Build out Support component
+    [x] Header
+    [x] How well are you being supported?
+    [x] input for number b/t 1 and 5
+    [x] "Next" button that links to Comments
+    [x] dispatch to Redux store
+    [x] Add to reducer object
+[x] Build out Comments component
+    [x] Header
+    [x] Comments h2
+    [x] input for number b/t 1 and 5
+    [x] "Next" button that links to Review
+    [x] dispatch to Redux store
+    [x] Add to reducer object
 [ ] Build out Review component
     - NO HEADER
     [ ] useSelector to bring in survey object
