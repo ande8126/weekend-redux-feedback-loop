@@ -1,10 +1,12 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 const Support = () => {
     //variable to bring in dispatch
     const dispatch = useDispatch();
+
+    const history = useHistory();
 
     //local state to hold score temporarily
     const [ supportScore, setSupportScore ] = useState('');
@@ -17,13 +19,13 @@ const Support = () => {
     
     //use dispatch to send supportScore to redux object
     const sendSupport = ( score )=>{
-        if( score > 5  || score < 1 ){
-            alert('Please Enter a value between 1-5')
-            setSupportScore('')
-            window.location.reload();
+        if( score > 5  || score < 1 || score === '' ){
+            alert( 'Please Enter a value between 1-5' )
+            setSupportScore( '' );
         }//end limiter
         else{
             dispatch({ type: 'sendSupport', payload: score })
+            history.push( '/comments' );
         }
     }
 
@@ -31,9 +33,7 @@ const Support = () => {
         <>
             <h2>How well are you being supported?</h2>
             <input value={supportScore} type="number" onChange={handleSupport}/>
-            <Link to="/comments">
-                <button onClick={() => sendSupport( supportScore )}>Next</button>
-            </Link>
+            <button onClick={() => sendSupport( supportScore )}>Next</button>
         </>
     )
 }

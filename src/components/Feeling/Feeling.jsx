@@ -25,7 +25,6 @@ const Feeling = () => {
         if( score > 5  || score < 1 || score === '' ){
             alert( 'Please Enter a value between 1-5' );
             setFeelingScore( '' );
-            // window.location.reload();
         }//end limiter
         else{
             dispatch({ type: 'sendFeeling', payload: score });

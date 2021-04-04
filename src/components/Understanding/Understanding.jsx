@@ -8,6 +8,9 @@ const Understanding = () => {
     //variable to bring in dispatch
     const dispatch = useDispatch();
 
+    //variable to bring in useHistory
+    const history = useHistory();
+
     //local state to hold score temporarily
     const [ understandingScore, setUnderstandingScore ] = useState('');
 
@@ -19,13 +22,13 @@ const Understanding = () => {
     
     //use dispatch to send understandingScore to redux object
     const sendUnderstanding = ( score )=>{
-        if( score > 5  || score < 1 ){
+        if( score > 5  || score < 1 || score === '' ){
             alert('Please Enter a value between 1-5')
-            setUnderstandingScore('');
-            window.location.reload();
+            setUnderstandingScore( '' );
         }
         else{
             dispatch({ type: 'sendUnderstanding', payload: score })
+            history.push( '/support' );
         }
     }
     
@@ -33,9 +36,7 @@ const Understanding = () => {
         <>
             <h2>How well are you understanding the content?</h2>
             <input value={understandingScore} type="number" onChange={handleUnderstanding}/>
-                <Link to="/support">
                 <button onClick={() => sendUnderstanding (understandingScore )}>Next</button>
-                </Link>
         </>
     )
 }
