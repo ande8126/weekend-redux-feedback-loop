@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory, Link } from 'react-router-dom';
-import React from 'react';
+import { Button, TextField } from '@material-ui/core';
+
 
 const Feeling = () => {
     //variable to bring in dispatch
@@ -35,9 +36,9 @@ const Feeling = () => {
     return (
         <>
             <h2>How are you feeling today?</h2>
-            <input value={feelingScore} type="number" onChange={handleFeeling}/>
+            <TextField label="Feeling" helperText="Score 1-5" autoFocus={true} value={feelingScore} type="number" onChange={handleFeeling}/>
             <br />
-            <button onClick={() => sendFeeling( feelingScore )}>Next</button>
+            <Button variant="contained" color="default" onClick={() => sendFeeling( feelingScore )}>Next</Button>
         </>
     )
 }

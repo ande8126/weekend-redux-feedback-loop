@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { Button, TextField } from '@material-ui/core';
 
 const Comments = () => {
     //bring in dispatch
@@ -22,13 +23,13 @@ const Comments = () => {
     return (
         <>
             <h2>Any comments you want to leave?</h2>
-            <input value={comments} type="text" onChange={handleComments}/>
+            <TextField label="Comments" helperText="optional" autoFocus={true} value={comments} type="text" onChange={handleComments}/>
             <br />
             <Link to="/support">
-                <button>Back</button>
+                <Button variant="contained">Back</Button>
             </Link>
             <Link to="/review">
-                <button onClick={() => sendComments( comments )}>Next</button>
+                <Button variant="contained" onClick={() => sendComments( comments )}>Next</Button>
             </Link>
         </>
     )

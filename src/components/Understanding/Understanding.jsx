@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import { useState, setState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import React from 'react';
+import { Button, TextField }  from '@material-ui/core';
 
 
 const Understanding = () => {
@@ -35,12 +36,12 @@ const Understanding = () => {
     return (
         <>
             <h2>How well are you understanding the content?</h2>
-            <input value={understandingScore} type="number" onChange={handleUnderstanding}/>
+            <TextField label="Understanding" helperText="Score 1-5" autoFocus={true} value={understandingScore} type="number" onChange={handleUnderstanding}/>
             <br />
             <Link to="/">
-                <button>Back</button>
+                <Button variant="contained">Back</Button>
             </Link>
-            <button onClick={() => sendUnderstanding (understandingScore )}>Next</button>
+            <Button variant="contained" onClick={() => sendUnderstanding (understandingScore )}>Next</Button>
         </>
     )
 }

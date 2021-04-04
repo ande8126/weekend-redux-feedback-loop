@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
+import { Button, TextField } from '@material-ui/core';
 
 const Support = () => {
     //variable to bring in dispatch
@@ -32,12 +33,12 @@ const Support = () => {
     return (
         <>
             <h2>How well are you being supported?</h2>
-            <input value={supportScore} type="number" onChange={handleSupport}/>
+            <TextField label="Support" helperText="Score 1-5" autoFocus={true} value={supportScore} type="number" onChange={handleSupport}/>
             <br />
             <Link to="/understanding">
-                <button>Back</button>
+                <Button variant="contained">Back</Button>
             </Link>
-            <button onClick={() => sendSupport( supportScore )}>Next</button>
+            <Button variant="contained" onClick={() => sendSupport( supportScore )}>Next</Button>
         </>
     )
 }

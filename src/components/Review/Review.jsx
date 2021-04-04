@@ -1,7 +1,7 @@
-import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Button from '@material-ui/core/Button';
 
 const Review = () => {
     //useSelecter to bring in survey object from Redux
@@ -26,8 +26,12 @@ const Review = () => {
             <p>Understanding: {survey.understanding}</p>
             <p>Support: {survey.support}</p>
             <p>Comments: {survey.comments}</p>
+            <br />
+            <Link to="/comments">
+                <Button variant="contained">Back</Button>
+            </Link>
             <Link to = "/submitted">
-                <button onClick={sendResults}>Submit</button>
+                <Button variant="contained" onClick={sendResults}>Submit</Button>
             </Link>
         </>
     )
