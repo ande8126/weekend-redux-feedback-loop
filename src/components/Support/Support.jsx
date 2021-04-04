@@ -7,22 +7,24 @@ const Support = () => {
     const dispatch = useDispatch();
 
     //local state to hold score temporarily
-    const [ supportScore, setSupportScore ] = useState(1);
+    const [ supportScore, setSupportScore ] = useState('');
 
     //function to handle score submission
     const handleSupport = (event) =>{;
-        if( event.target.value > 5  || event.target.value < 1 ){
-            alert('Please Enter a value between 1-5')
-            setSupportScore('')
-        }//end limiter
-        else{
-            setSupportScore(event.target.value)
-        }//end set score
+        let number = Number( event.target.value );
+        setSupportScore( number );
     }//end handleSupport
     
     //use dispatch to send supportScore to redux object
     const sendSupport = ( score )=>{
-        dispatch({ type: 'sendSupport', payload: score })
+        if( score > 5  || score < 1 ){
+            alert('Please Enter a value between 1-5')
+            setSupportScore('')
+            window.location.reload();
+        }//end limiter
+        else{
+            dispatch({ type: 'sendSupport', payload: score })
+        }
     }
 
     return (
