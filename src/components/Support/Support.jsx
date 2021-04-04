@@ -33,6 +33,10 @@ const Support = () => {
         <>
             <h2>How well are you being supported?</h2>
             <input value={supportScore} type="number" onChange={handleSupport}/>
+            <br />
+            <Link to="/understanding">
+                <button>Back</button>
+            </Link>
             <button onClick={() => sendSupport( supportScore )}>Next</button>
         </>
     )

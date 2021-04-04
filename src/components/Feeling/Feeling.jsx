@@ -36,6 +36,7 @@ const Feeling = () => {
         <>
             <h2>How are you feeling today?</h2>
             <input value={feelingScore} type="number" onChange={handleFeeling}/>
+            <br />
             <button onClick={() => sendFeeling( feelingScore )}>Next</button>
         </>
     )

@@ -36,7 +36,11 @@ const Understanding = () => {
         <>
             <h2>How well are you understanding the content?</h2>
             <input value={understandingScore} type="number" onChange={handleUnderstanding}/>
-                <button onClick={() => sendUnderstanding (understandingScore )}>Next</button>
+            <br />
+            <Link to="/">
+                <button>Back</button>
+            </Link>
+            <button onClick={() => sendUnderstanding (understandingScore )}>Next</button>
         </>
     )
 }

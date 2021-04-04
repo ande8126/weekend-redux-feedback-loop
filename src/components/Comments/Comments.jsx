@@ -23,6 +23,10 @@ const Comments = () => {
         <>
             <h2>Any comments you want to leave?</h2>
             <input value={comments} type="text" onChange={handleComments}/>
+            <br />
+            <Link to="/support">
+                <button>Back</button>
+            </Link>
             <Link to="/review">
                 <button onClick={() => sendComments( comments )}>Next</button>
             </Link>
