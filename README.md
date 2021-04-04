@@ -1,12 +1,10 @@
-# Project Name
+# Class feedback sample
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+An online app that allows users to rate a course they're taking, with numeral scores for feeling, understanding and support, plus a comments section.
 
-## Description
+## Built as part of Prime assignment
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+This app was started as a weekend challenge assignment from my courswork at Prime Digital Academy. The "base-mode" assignment version of this app is built with React and Redux, with a Express.js POST route that connects the scores to a SQL database.
 
 
 # To-do
@@ -54,10 +52,10 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     [x] "Next" button that links to Review
     [x] dispatch to Redux store
     [x] Add to reducer object
-[ ] Build out Review component
+[x] Build out Review component
     - NO HEADER
-    [ ] useSelector to bring in survey object
-    [ ] Display to DOM
-    [ ] Submit button
-    [ ] POST route to send to database when submit is clicked
+    [x] useSelector to bring in survey object
+    [x] Display to DOM
+    [x] Submit button
+    [x] POST route to send to database when submit is clicked
 
