@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useState, setState } from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import React from 'react';
 
 
